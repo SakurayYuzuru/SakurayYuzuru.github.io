@@ -3,73 +3,123 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Boyu Zhang — Curriculum Vitae</title>
-  <meta name="description" content="Boyu Zhang — Computer Science undergraduate focusing on computer graphics, real-time and neural rendering." />
+  <title>Boyu Zhang</title>
+  <meta name="description" content="Boyu Zhang — Computer Science undergraduate working on computer graphics, real-time rendering and neural rendering." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="lang-switch">
-    <a href="zh.html" title="切换到中文版">中文</a>
-  </div>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-brand">Boyu Zhang</a>
+      <a href="#bio" class="nav-link">Bio</a>
+      <a href="#news" class="nav-link">News</a>
+      <a href="#research" class="nav-link">Research</a>
+      <a href="#experience" class="nav-link">Experience</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="assets/BoyuZhang.pdf" class="nav-link" target="_blank" rel="noopener">CV</a>
+      <a href="zh.html" class="nav-lang" title="切换到中文">中文</a>
+    </div>
+  </nav>
 
-  <main class="page">
-    <header class="masthead">
-      <h1>Boyu Zhang</h1>
-      <p class="subtitle">Computer Graphics &middot; Real-time &amp; Neural Rendering</p>
-      <ul class="contact">
-        <li><a href="tel:+8615662078732">(+86) 15662078732</a></li>
-        <li><a href="mailto:sakulapii@gmail.com">sakulapii@gmail.com</a></li>
-        <li><a href="https://github.com/Sakuray56" target="_blank" rel="noopener">github.com/Sakuray56</a></li>
-        <li><a href="assets/BoyuZhang.pdf" target="_blank" rel="noopener">PDF</a></li>
-      </ul>
+  <div class="container">
+    <header class="profile">
+      <img class="profile-photo" src="assets/avatar.svg" alt="Boyu Zhang" />
+      <div class="profile-info">
+        <h1>Boyu Zhang</h1>
+        <p class="tagline">Computer Graphics &middot; Real-time &amp; Neural Rendering</p>
+        <ul class="affiliations">
+          <li>B.S. Computer Science, Guizhou Normal University</li>
+          <li>Rendering Intern, Tencent &mdash; Morefun Studio</li>
+        </ul>
+        <div class="socials">
+          <a href="mailto:sakulapii@gmail.com">✉ Email</a>
+          <a href="https://github.com/Sakuray56" target="_blank" rel="noopener">⌨ GitHub</a>
+          <a href="assets/BoyuZhang.pdf" target="_blank" rel="noopener">📄 CV</a>
+        </div>
+      </div>
     </header>
 
-    <section class="section">
-      <h2>Education</h2>
-      <div class="entry">
-        <div class="entry-head">
-          <span class="entry-title">Guizhou Normal University</span>
-          <span class="entry-date">2023.09 &ndash; Present</span>
+    <section id="bio" class="section">
+      <h2>👨‍🎓 Biography</h2>
+      <p>
+        I am an undergraduate student in Computer Science and Technology at
+        <strong>Guizhou Normal University</strong>. My interests lie in computer graphics,
+        with a focus on <strong>real-time rendering</strong> and <strong>neural rendering</strong>.
+        I am currently a rendering intern at <strong>Tencent's Morefun Studio</strong>,
+        working on neural material representation and GPU inference for game engines.
+      </p>
+      <p>
+        I enjoy building rendering systems from the ground up &mdash; from a from-scratch
+        software rasterizer to a cross-platform game engine (<em>Sakuray Engine</em>) &mdash;
+        and understanding how classical and neural approaches trade off in interactive settings.
+      </p>
+      <p class="quote">&ldquo;Build it once to understand it, build it twice to make it fast.&rdquo;</p>
+    </section>
+
+    <section id="news" class="section">
+      <h2>📰 News</h2>
+      <ul class="news">
+        <li><span class="date">2026.01</span><span class="what">Started a rendering internship at <strong>Tencent &mdash; Morefun Studio</strong>, working on neural material rendering for game engines.</span></li>
+        <li><span class="date">2025.10</span><span class="what">Built a real-time neural appearance rendering system running stably at <strong>144 FPS</strong>.</span></li>
+        <li><span class="date">2025.05</span><span class="what">Began developing <strong>Sakuray Engine</strong>, a cross-platform (Windows / Linux) game engine.</span></li>
+        <li><span class="date">2025.04</span><span class="what">Won a <strong>Bronze Medal</strong> at the 2024&ndash;2025 ICPC China Guizhou Provincial Programming Contest.</span></li>
+        <li><span class="date">2024</span><span class="what">Selected for the <strong>CCF Graphics Morningstar Program</strong> Summer Camp (CGPC 2024 / 2025).</span></li>
+      </ul>
+    </section>
+
+    <section id="research" class="section">
+      <h2>🔬 Research Interests</h2>
+      <div class="interests">
+        <div class="interest">
+          <h3>Real-time Rendering</h3>
+          <p>Real-time rendering pipelines, PBR, and GPU performance optimization.</p>
         </div>
-        <div class="entry-sub">B.S. in Computer Science and Technology</div>
+        <div class="interest">
+          <h3>Neural Rendering &amp; Appearance</h3>
+          <p>Neural material representation and inference (NeRF, NeuMIP), latent appearance models.</p>
+        </div>
+        <div class="interest">
+          <h3>Game Engine Architecture</h3>
+          <p>ECS design, virtual geometry (Nanite-style), and cross-platform engine tooling.</p>
+        </div>
       </div>
     </section>
 
-    <section class="section">
-      <h2>Research Experience</h2>
+    <section id="experience" class="section">
+      <h2>💼 Experience</h2>
 
       <div class="entry">
         <div class="entry-head">
           <span class="entry-title">Tencent &mdash; Morefun Studio</span>
           <span class="entry-date">2026.01 &ndash; 2026.06</span>
         </div>
-        <div class="entry-sub">Game Engine Rendering &amp; Appearance</div>
+        <div class="entry-sub">Rendering Intern &middot; Game Engine Rendering &amp; Appearance</div>
         <ul>
-          <li>Designed neural representations of complex materials and a game-oriented neural material rendering scheme; reproduced NeuMIP's GPU inference network on <strong>Slang + RTX Neural Shading</strong>, keeping structural and numerical parity with the Torch/CUDA reference (error within <strong>1e-6</strong>).</li>
-          <li>Implemented loading and weight mapping of PyTorch training checkpoints and built a complete runtime inference pipeline supporting millisecond-level inference in real-time rendering scenes.</li>
-          <li>Developed key inference modules such as <em>Shadow Offset</em>, validated across 3+ models and multiple lighting conditions, reaching a <strong>99%</strong> rendering match rate.</li>
-          <li>Analyzed inference bottlenecks and introduced <em>Cooperative Vector</em> optimization, improving inference speed by <strong>~15%</strong>.</li>
-          <li>Explored FP8 / INT8 (DP4A) quantized inference; devised and implemented an FP8-first, PTQ&rarr;QAT strategy, compressing model size by <strong>40%</strong> and improving inference speed by <strong>20%</strong>.</li>
+          <li>Reproduced NeuMIP's GPU inference network on <em>Slang + RTX Neural Shading</em>, keeping structural and numerical parity with the Torch/CUDA reference (error within 1e-6).</li>
+          <li>Built a complete runtime inference pipeline from PyTorch checkpoints, supporting millisecond-level inference in real-time scenes.</li>
+          <li>Developed key inference modules (e.g. <em>Shadow Offset</em>), validated across 3+ models and multiple lighting conditions (99% match rate).</li>
+          <li>Introduced <em>Cooperative Vector</em> optimization (~15% faster) and an FP8-first PTQ&rarr;QAT quantization strategy (40% smaller, 20% faster).</li>
         </ul>
       </div>
 
       <div class="entry">
         <div class="entry-head">
-          <span class="entry-title">CCF Graphics Morningstar Program Summer Camp</span>
-          <span class="entry-date">CGPC 2024 / 2025</span>
+          <span class="entry-title">CCF Graphics Morningstar Program (CGPC)</span>
+          <span class="entry-date">2024 / 2025</span>
         </div>
+        <div class="entry-sub">Summer Camp Participant</div>
         <ul>
-          <li>Studied traditional rendering methods and neural rendering research progress, understanding the role of neural representation in appearance modeling and rendering acceleration.</li>
-          <li>Studied core geometry-processing problems (surface reconstruction, mesh simplification, parameterization and geometric representation), strengthening understanding of low-level representation problems in graphics.</li>
+          <li>Studied traditional and neural rendering, and the role of neural representation in appearance modeling and rendering acceleration.</li>
+          <li>Studied core geometry processing: surface reconstruction, mesh simplification, parameterization and geometric representation.</li>
         </ul>
       </div>
     </section>
 
-    <section class="section">
-      <h2>Projects</h2>
+    <section id="projects" class="section">
+      <h2>🛠️ Projects</h2>
 
       <div class="entry">
         <div class="entry-head">
@@ -77,25 +127,22 @@
           <span class="entry-date">2025.09 &ndash; 2025.10</span>
         </div>
         <ul>
-          <li>Reproduced and optimized a near-real-time neural appearance rendering system, stabilizing rendering at <strong>144 FPS</strong> and verifying the feasibility of neural networks in interactive rendering.</li>
-          <li>Encoded material attributes (RGB, Diffuse, Specular, Albedo) into a Latent Code, reducing network input dimension by <strong>70%</strong>.</li>
-          <li>Designed a lightweight MLP fusing Shading Frame and Latent Code for BRDF approximation, reducing parameters by <strong>40%</strong> and improving inference speed by <strong>50%</strong>.</li>
-          <li>Built an OpenGL client-side real-time rendering and interaction module, supporting high-quality rendering under dynamic viewpoints across varied lighting conditions.</li>
-          <li>Compared neural rendering against traditional physical rendering pipelines, summarizing 3 key performance metrics as an experimental basis for follow-up research.</li>
+          <li>Reproduced and optimized a near-real-time neural appearance rendering system, stable at <em>144 FPS</em>.</li>
+          <li>Encoded material attributes (RGB, Diffuse, Specular, Albedo) into a Latent Code, reducing input dimension by 70%.</li>
+          <li>Designed a lightweight MLP fusing Shading Frame and Latent Code for BRDF approximation (40% fewer params, 50% faster).</li>
+          <li>Built an OpenGL client-side real-time rendering and interaction module for dynamic viewpoints and varied lighting.</li>
         </ul>
       </div>
 
       <div class="entry">
         <div class="entry-head">
-          <span class="entry-title">Sakuray Engine</span>
+          <span class="entry-title"><a href="https://github.com/Sakuray56" target="_blank" rel="noopener">Sakuray Engine</a></span>
           <span class="entry-date">2025.05 &ndash; Present</span>
         </div>
         <ul>
-          <li>Independently designed and built a cross-platform game engine (Windows / Linux) covering rendering, resource management and a basic toolchain.</li>
-          <li>Implemented the core rendering module with forward rendering and a basic PBR pipeline.</li>
-          <li>Integrated the MERL material library for material representation and rendering validation from real measured data.</li>
-          <li>Currently designing and implementing an ECS architecture to improve decoupling and extensibility.</li>
-          <li>Exploring a Nanite-style virtual geometry system, researching real-time rendering and scheduling for large-scale geometry.</li>
+          <li>Cross-platform game engine (Windows / Linux) covering rendering, resource management and a basic toolchain.</li>
+          <li>Core rendering module with forward rendering and a basic PBR pipeline; integrated the MERL material library.</li>
+          <li>Designing an ECS architecture and exploring a Nanite-style virtual geometry system for large-scale scenes.</li>
         </ul>
       </div>
 
@@ -105,38 +152,34 @@
           <span class="entry-date">2025.03 &ndash; 2025.04</span>
         </div>
         <ul>
-          <li>Implemented a complete software rendering pipeline from scratch, systematically simulating the GPU rendering flow.</li>
-          <li>Supported vertex processing, triangle rasterization, interpolation and basic texture mapping.</li>
-          <li>Implemented a Z-Buffer depth-test mechanism, correctly handling geometric occlusion.</li>
-          <li>Adopted a modular architecture decoupling Shader from the rendering core, providing an extensible foundation for engine development.</li>
+          <li>A complete software rendering pipeline from scratch, simulating the GPU rendering flow.</li>
+          <li>Vertex processing, triangle rasterization, interpolation, basic texture mapping and Z-Buffer depth testing.</li>
+          <li>Modular architecture decoupling Shader from the rendering core.</li>
         </ul>
       </div>
     </section>
 
-    <section class="section">
-      <h2>Technical Skills</h2>
-      <dl class="skills">
-        <dt>Languages</dt>
-        <dd>C/C++, Python, Slang</dd>
-        <dt>Graphics / Rendering</dt>
-        <dd>Real-time rendering pipeline, PBR, Neural Rendering (NeRF / NeuMIP), OpenGL / Vulkan basics</dd>
-        <dt>Systems &amp; Tools</dt>
-        <dd>Linux / Bash, CMake / Makefile, Git, RenderDoc</dd>
-      </dl>
+    <section id="skills" class="section">
+      <h2>🧰 Skills</h2>
+      <div class="tags">
+        <span class="tag">C/C++</span>
+        <span class="tag">Python</span>
+        <span class="tag">Slang</span>
+        <span class="tag">OpenGL</span>
+        <span class="tag">Vulkan</span>
+        <span class="tag">PBR</span>
+        <span class="tag">Neural Rendering</span>
+        <span class="tag">CMake</span>
+        <span class="tag">Git</span>
+        <span class="tag">RenderDoc</span>
+        <span class="tag">Linux</span>
+      </div>
     </section>
 
-    <section class="section">
-      <h2>Awards &amp; Honors</h2>
-      <ul>
-        <li><strong>ICPC 2024&ndash;2025 China Guizhou Provincial Programming Contest</strong> &mdash; Bronze Medal</li>
-        <li>English &mdash; CET-4</li>
-      </ul>
-    </section>
-
-    <footer class="colophon">
-      <span>Boyu Zhang</span>
-      <span>Last updated 2026</span>
+    <footer class="footer">
+      <span>&copy; 2026 Boyu Zhang</span>
+      <span>Built with HTML &amp; CSS &middot; deployed on GitHub Pages</span>
     </footer>
-  </main>
+  </div>
 </body>
 </html>
