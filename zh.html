@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>张博宇 — 个人简历</title>
+  <meta name="description" content="张博宇 — 计算机科学与技术本科，专注计算机图形学、实时渲染与神经渲染。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&family=Noto+Serif+SC:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="lang-zh">
+  <div class="lang-switch">
+    <a href="index.html" title="Switch to English">EN</a>
+  </div>
+
+  <main class="page">
+    <header class="masthead">
+      <h1>张博宇</h1>
+      <p class="subtitle">计算机图形学 &middot; 实时渲染与神经渲染</p>
+      <ul class="contact">
+        <li><a href="tel:+8615662078732">(+86) 15662078732</a></li>
+        <li><a href="mailto:sakulapii@gmail.com">sakulapii@gmail.com</a></li>
+        <li><a href="https://github.com/Sakuray56" target="_blank" rel="noopener">github.com/Sakuray56</a></li>
+        <li><a href="assets/BoyuZhang.pdf" target="_blank" rel="noopener">PDF</a></li>
+      </ul>
+    </header>
+
+    <section class="section">
+      <h2>教育背景</h2>
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-title">贵州师范大学</span>
+          <span class="entry-date">2023.09 &ndash; 至今</span>
+        </div>
+        <div class="entry-sub">计算机科学与技术 &middot; 本科</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>科研经历</h2>
+
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-title">腾讯 &mdash; 魔方工作室</span>
+          <span class="entry-date">2026.01 &ndash; 2026.06</span>
+        </div>
+        <div class="entry-sub">游戏引擎渲染表现方向</div>
+        <ul>
+          <li>设计复杂材质的神经表达与面向游戏的神经材质渲染方案，基于 <strong>Slang + RTX Neural Shading</strong> 复刻 NeuMIP 的 GPU 推理网络，确保与 Torch/CUDA 版本在结构与数值行为上的一致性，误差控制在 <strong>1e-6</strong> 以内。</li>
+          <li>实现 PyTorch 训练 checkpoint 的加载与权重映射，搭建完整的运行时推理流程，支持实时渲染场景下毫秒级推理。</li>
+          <li>开发 <em>Shadow Offset</em> 等关键推理模块，并在 3 种以上不同模型与多种光照条件下完成验证，渲染效果匹配率达 <strong>99%</strong>。</li>
+          <li>分析推理性能瓶颈，通过引入 <em>Cooperative Vector</em> 优化，将推理速度提升约 <strong>15%</strong>。</li>
+          <li>探索 FP8 / INT8（DP4A）量化推理方案，制定并实施 FP8 优先、PTQ&rarr;QAT 的优化策略，模型大小压缩 <strong>40%</strong>，推理速度提升 <strong>20%</strong>。</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-title">CCF 图形学启明星计划夏令营</span>
+          <span class="entry-date">CGPC 2024 / 2025</span>
+        </div>
+        <ul>
+          <li>系统学习计算机图形学传统渲染方法与神经渲染研究进展，理解神经表示在外观建模与渲染加速中的作用。</li>
+          <li>系统学习几何处理核心问题（曲面重建、网格简化、参数化与几何表示），强化对图形学底层表示问题的理解。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>项目经验</h2>
+
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-title">实时神经外观模型</span>
+          <span class="entry-date">2025.09 &ndash; 2025.10</span>
+        </div>
+        <ul>
+          <li>复现并优化近实时神经外观渲染系统，将渲染速度稳定在 <strong>144 FPS</strong>，验证了神经网络在交互式渲染中的可行性。</li>
+          <li>将 RGB、Diffuse、Specular、Albedo 等材质属性编码为 Latent Code，将网络输入维度降低 <strong>70%</strong>，显著提升计算效率。</li>
+          <li>设计轻量级 MLP 网络结构，融合 Shading Frame 与 Latent Code，实现 BRDF 近似回归，模型参数量减少 <strong>40%</strong>，推理速度提升 <strong>50%</strong>。</li>
+          <li>基于 OpenGL 开发客户端实时渲染与交互模块，支持动态视角下高质量渲染，并在多种光照条件下验证模型稳定性。</li>
+          <li>系统对比神经渲染与传统物理渲染管线差异，总结 3 项关键性能指标，为后续神经渲染研究提供实验依据。</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-title">Sakuray Engine</span>
+          <span class="entry-date">2025.05 &ndash; 至今</span>
+        </div>
+        <ul>
+          <li>自主设计并开发跨平台游戏引擎（Windows / Linux），覆盖渲染、资源管理与基础工具链。</li>
+          <li>实现核心渲染模块，支持前向渲染与基础 PBR 管线。</li>
+          <li>集成 MERL 材质库，实现基于真实测量数据的材质表达与渲染验证。</li>
+          <li>正在设计并实现 ECS 架构，提升系统解耦性与扩展能力。</li>
+          <li>探索 Nanite 风格虚拟几何系统，研究大规模几何数据的实时渲染与调度策略。</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-title">跨平台软光栅器</span>
+          <span class="entry-date">2025.03 &ndash; 2025.04</span>
+        </div>
+        <ul>
+          <li>从零实现完整软件渲染管线，系统性模拟 GPU 渲染流程。</li>
+          <li>支持顶点处理、三角形光栅化、插值与基础纹理映射。</li>
+          <li>实现 Z-Buffer 深度测试机制，正确处理几何遮挡问题。</li>
+          <li>采用模块化架构设计，解耦 Shader 与渲染核心，为后续引擎开发提供可扩展基础。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>专业技能</h2>
+      <dl class="skills">
+        <dt>编程语言</dt>
+        <dd>C/C++、Python、Slang</dd>
+        <dt>图形学 / 渲染</dt>
+        <dd>实时渲染管线、PBR、神经渲染（NeRF / NeuMIP）、OpenGL / Vulkan 基础使用</dd>
+        <dt>系统与工具</dt>
+        <dd>Linux / Bash、CMake / Makefile、Git、RenderDoc</dd>
+      </dl>
+    </section>
+
+    <section class="section">
+      <h2>奖项荣誉</h2>
+      <ul>
+        <li><strong>2024&ndash;2025 ICPC 贵州省程序设计竞赛</strong> &mdash; 铜牌</li>
+        <li>英语 &mdash; CET-4</li>
+      </ul>
+    </section>
+
+    <footer class="colophon">
+      <span>张博宇</span>
+      <span>更新于 2026 年</span>
+    </footer>
+  </main>
+</body>
+</html>

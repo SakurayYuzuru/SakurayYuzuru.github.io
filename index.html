@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boyu Zhang — Curriculum Vitae</title>
+  <meta name="description" content="Boyu Zhang — Computer Science undergraduate focusing on computer graphics, real-time and neural rendering." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="lang-switch">
+    <a href="zh.html" title="切换到中文版">中文</a>
+  </div>
+
+  <main class="page">
+    <header class="masthead">
+      <h1>Boyu Zhang</h1>
+      <p class="subtitle">Computer Graphics &middot; Real-time &amp; Neural Rendering</p>
+      <ul class="contact">
+        <li><a href="tel:+8615662078732">(+86) 15662078732</a></li>
+        <li><a href="mailto:sakulapii@gmail.com">sakulapii@gmail.com</a></li>
+        <li><a href="https://github.com/Sakuray56" target="_blank" rel="noopener">github.com/Sakuray56</a></li>
+        <li><a href="assets/BoyuZhang.pdf" target="_blank" rel="noopener">PDF</a></li>
+      </ul>
+    </header>
+
+    <section class="section">
+      <h2>Education</h2>
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-title">Guizhou Normal University</span>
+          <span class="entry-date">2023.09 &ndash; Present</span>
+        </div>
+        <div class="entry-sub">B.S. in Computer Science and Technology</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Research Experience</h2>
+
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-title">Tencent &mdash; Morefun Studio</span>
+          <span class="entry-date">2026.01 &ndash; 2026.06</span>
+        </div>
+        <div class="entry-sub">Game Engine Rendering &amp; Appearance</div>
+        <ul>
+          <li>Designed neural representations of complex materials and a game-oriented neural material rendering scheme; reproduced NeuMIP's GPU inference network on <strong>Slang + RTX Neural Shading</strong>, keeping structural and numerical parity with the Torch/CUDA reference (error within <strong>1e-6</strong>).</li>
+          <li>Implemented loading and weight mapping of PyTorch training checkpoints and built a complete runtime inference pipeline supporting millisecond-level inference in real-time rendering scenes.</li>
+          <li>Developed key inference modules such as <em>Shadow Offset</em>, validated across 3+ models and multiple lighting conditions, reaching a <strong>99%</strong> rendering match rate.</li>
+          <li>Analyzed inference bottlenecks and introduced <em>Cooperative Vector</em> optimization, improving inference speed by <strong>~15%</strong>.</li>
+          <li>Explored FP8 / INT8 (DP4A) quantized inference; devised and implemented an FP8-first, PTQ&rarr;QAT strategy, compressing model size by <strong>40%</strong> and improving inference speed by <strong>20%</strong>.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-title">CCF Graphics Morningstar Program Summer Camp</span>
+          <span class="entry-date">CGPC 2024 / 2025</span>
+        </div>
+        <ul>
+          <li>Studied traditional rendering methods and neural rendering research progress, understanding the role of neural representation in appearance modeling and rendering acceleration.</li>
+          <li>Studied core geometry-processing problems (surface reconstruction, mesh simplification, parameterization and geometric representation), strengthening understanding of low-level representation problems in graphics.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Projects</h2>
+
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-title">Real-time Neural Appearance Model</span>
+          <span class="entry-date">2025.09 &ndash; 2025.10</span>
+        </div>
+        <ul>
+          <li>Reproduced and optimized a near-real-time neural appearance rendering system, stabilizing rendering at <strong>144 FPS</strong> and verifying the feasibility of neural networks in interactive rendering.</li>
+          <li>Encoded material attributes (RGB, Diffuse, Specular, Albedo) into a Latent Code, reducing network input dimension by <strong>70%</strong>.</li>
+          <li>Designed a lightweight MLP fusing Shading Frame and Latent Code for BRDF approximation, reducing parameters by <strong>40%</strong> and improving inference speed by <strong>50%</strong>.</li>
+          <li>Built an OpenGL client-side real-time rendering and interaction module, supporting high-quality rendering under dynamic viewpoints across varied lighting conditions.</li>
+          <li>Compared neural rendering against traditional physical rendering pipelines, summarizing 3 key performance metrics as an experimental basis for follow-up research.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-title">Sakuray Engine</span>
+          <span class="entry-date">2025.05 &ndash; Present</span>
+        </div>
+        <ul>
+          <li>Independently designed and built a cross-platform game engine (Windows / Linux) covering rendering, resource management and a basic toolchain.</li>
+          <li>Implemented the core rendering module with forward rendering and a basic PBR pipeline.</li>
+          <li>Integrated the MERL material library for material representation and rendering validation from real measured data.</li>
+          <li>Currently designing and implementing an ECS architecture to improve decoupling and extensibility.</li>
+          <li>Exploring a Nanite-style virtual geometry system, researching real-time rendering and scheduling for large-scale geometry.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-title">Cross-platform Software Rasterizer</span>
+          <span class="entry-date">2025.03 &ndash; 2025.04</span>
+        </div>
+        <ul>
+          <li>Implemented a complete software rendering pipeline from scratch, systematically simulating the GPU rendering flow.</li>
+          <li>Supported vertex processing, triangle rasterization, interpolation and basic texture mapping.</li>
+          <li>Implemented a Z-Buffer depth-test mechanism, correctly handling geometric occlusion.</li>
+          <li>Adopted a modular architecture decoupling Shader from the rendering core, providing an extensible foundation for engine development.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Technical Skills</h2>
+      <dl class="skills">
+        <dt>Languages</dt>
+        <dd>C/C++, Python, Slang</dd>
+        <dt>Graphics / Rendering</dt>
+        <dd>Real-time rendering pipeline, PBR, Neural Rendering (NeRF / NeuMIP), OpenGL / Vulkan basics</dd>
+        <dt>Systems &amp; Tools</dt>
+        <dd>Linux / Bash, CMake / Makefile, Git, RenderDoc</dd>
+      </dl>
+    </section>
+
+    <section class="section">
+      <h2>Awards &amp; Honors</h2>
+      <ul>
+        <li><strong>ICPC 2024&ndash;2025 China Guizhou Provincial Programming Contest</strong> &mdash; Bronze Medal</li>
+        <li>English &mdash; CET-4</li>
+      </ul>
+    </section>
+
+    <footer class="colophon">
+      <span>Boyu Zhang</span>
+      <span>Last updated 2026</span>
+    </footer>
+  </main>
+</body>
+</html>
